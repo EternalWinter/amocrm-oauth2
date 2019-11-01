@@ -1,0 +1,25 @@
+{
+  "name": "www",
+  "version": "1.0.0",
+  "dependencies": {
+    "@zalando/oauth2-client-js": "0.0.18",
+    "amocrm-js": "latest",
+    "axios": "^0.19.0",
+    "body-parser": "latest",
+    "cors": "^2.8.5",
+    "express": "latest",
+    "follow-redirects": "^1.9.0",
+    "multer": "latest",
+    "node-fetch": "^2.6.0",
+    "node-libcurl": "^2.0.2",
+    "passport": "^0.4.0",
+    "passport-oauth": "^1.0.0",
+    "querystring": "^0.2.0",
+    "request": "^2.88.0",
+    "simple-oauth2": "^3.0.1"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0"
+  }
+}
