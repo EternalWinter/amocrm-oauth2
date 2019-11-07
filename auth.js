@@ -54,7 +54,7 @@ class Authorization {
     }
 }
 // added the "subdomain" arg
-const token = new Authorization(options, refresh, 'tema24');
+const token = new Authorization(options, refresh, '***');
 // update the schedule method: everyday at 13:00 script will refresh the tokens
 try {
     const job = new CronJob('00 00 13 * * 0-6', function () {
