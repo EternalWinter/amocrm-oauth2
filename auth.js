@@ -15,42 +15,39 @@ class Authorization {
     }
 
     // there we have the access and refresh token from amoCRM
-    getTokens() {
-        axios.post(
-            `https://${this.subdomain}.amocrm.ru/oauth2/access_token`,
-            this.options)
-            .then((result) => {
-                console.log('result', result)
-                fs.writeFile('tokens.js',
-                    'exports.tokens = ' + JSON.stringify(result.data),
-                    'utf8',
-                    function (error) {
-                        if (error) throw error;
-                        console.log('error:', error);
-                    }
-                )
-            })
-            .catch(err => {
-                console.log('err:', err)
-            });
+    async getTokens() {
+        try {
+            const response = await axios.post(
+                `https://${this.subdomain}.amocrm.ru/oauth2/access_token`,
+                this.options);
+            fs.writeFile('tokens.js',
+                'exports.tokens = ' + JSON.stringify(response.data),
+                'utf8',
+                function (error) {
+                    if (error) throw error;
+                    console.log('error:', error);
+                })
+        } catch (e) {
+            if (e) console.log('err:', e);
+        }
     }
+
     // there we are refresh the amoCRM access token
-    refreshTokens() {
-        axios.post(`https://${this.subdomain}.amocrm.ru/oauth2/access_token`,
-            this.refresh)
-            .then((result) => {
-                console.log('result', result.data)
-                fs.writeFile('tokens.js',
-                    'exports.tokens = ' + JSON.stringify(result.data),
-                    'utf8',
-                    function (error) {
-                        if (error) throw error;
-                        console.log('error:', error);
-                    })
-            })
-            .catch(err => {
-                console.log('err:', err)
-            })
+    async refreshTokens() {
+        try {
+            const response = await axios.post(`https://${this.subdomain}.amocrm.ru/oauth2/access_token`,
+                this.refresh);
+            console.log(response.data);
+            fs.writeFile('tokens.js',
+                'exports.tokens = ' + JSON.stringify(response.data),
+                'utf8',
+                function (error) {
+                    if (error) throw error;
+                    console.log('error:', error);
+                });
+        } catch (e) {
+            if (e) console.log('err:', e);
+        }
     }
 }
 // added the "subdomain" arg
