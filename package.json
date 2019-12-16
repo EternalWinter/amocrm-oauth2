@@ -1,16 +1,15 @@
 {
   "name": "amocrm-oauth2",
-  "version": "0.0.1",
+  "version": "0.0.8",
   "description": "my simple module to authorize on amocrm for different projects",
   "main": "./src/deploy.js",
   "directories": {
-    "src": "src",
     "lib": "lib"
   },
   "scripts": {
     "deploy": "node ./src/deploy.js"
   },
-  "repository": { 
+  "repository": {
     "type": "git",
     "url": "git+https://github.com/999envy/amoCRM-oauth2.0-node.js.git"
   },
@@ -25,13 +24,10 @@
     "url": "https://github.com/999envy/amoCRM-oauth2.0-node.js/issues"
   },
   "homepage": "https://github.com/999envy/amoCRM-oauth2.0-node.js#readme",
-
-    "dependencies": {
+  "dependencies": {
     "axios": "^0.19.0",
     "body-parser": "latest",
-    "cron": "^1.7.2",
-    "express": "latest",
-    "hygen": "^5.0.3"
+    "express": "latest"
   },
   "devDependencies": {
     "babel-preset-env": "^1.7.0",

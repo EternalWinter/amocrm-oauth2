@@ -2,8 +2,8 @@ exports.tokens = {
     "token_type": "Bearer",
     "expires_in": 86400,
     "access_token": "xxxx",
-    "refresh_token": "xxxx"
-}
+    "refresh_token": "false"
+};
 
 exports.options = {
     "client_id": "xxxx",
@@ -20,3 +20,4 @@ exports.refresh = {
     "refresh_token": "`${require('./tokens.js').tokens.refresh_token}`",
     "redirect_uri": "https://example.com"
 };
+
