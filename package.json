@@ -1,6 +1,6 @@
 {
   "name": "amocrm-oauth2",
-  "version": "0.0.21",
+  "version": "0.0.26",
   "description": "my simple module to authorize on amocrm for different projects",
   "main": "./src/deploy.js",
   "directories": {
