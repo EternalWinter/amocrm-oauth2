@@ -1,17 +1,21 @@
 {
   "name": "amocrm-oauth2",
-  "version": "0.0.13",
+  "version": "0.0.21",
   "description": "my simple module to authorize on amocrm for different projects",
   "main": "./src/deploy.js",
   "directories": {
-    "lib": "lib"
+    "lib": "lib",
+    "src": "src"
+  },
+  "bin": {
+    "deploy": "./src/deploy.js"
   },
   "scripts": {
     "deploy": "node ./src/deploy.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/999envy/amoCRM-oauth2.0-node.js.git"
+    "url": "git+https://github.com/999envy/amocrm-oauth2.git"
   },
   "keywords": [
     "amocrm",
@@ -21,9 +25,9 @@
   "author": "999envy",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/999envy/amoCRM-oauth2.0-node.js/issues"
+    "url": "https://github.com/999envy/amocrm-oauth2/issues"
   },
-  "homepage": "https://github.com/999envy/amoCRM-oauth2.0-node.js#readme",
+  "homepage": "https://github.com/999envy/amocrm-oauth2#readme",
   "dependencies": {
     "axios": "^0.19.0",
     "body-parser": "latest",
