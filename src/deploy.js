@@ -27,7 +27,7 @@ fs.mkdir(`./${folder}`, function () {
 
 
     fs.appendFile(`./${folder}/newAuth.js`,
-        '\n' + `let ${process.argv[3]}Auth = new Auth(options, refresh, '${process.argv[3]}')`, function (error) {
+        '\n' + `let ${process.argv[3]}Auth = new Auth({options}, {refresh}, '${process.argv[3]}')`, function (error) {
             if (error) console.log('deploy auth.js error: ', error);
         });
 
