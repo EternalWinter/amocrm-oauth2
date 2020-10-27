@@ -32,3 +32,7 @@ fs.mkdir(`./${folder}`, function () {
         });
 
 });
+
+(async () => {
+   await fs.mkdir()
+})();
